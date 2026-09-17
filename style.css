@@ -1,0 +1,24 @@
+:root{
+  --bg:#0b1220; --card:#0f1724; --muted:#9aa4b2; --accent:#38bdf8; --success:#16a34a; --danger:#ef4444;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;background:var(--bg);color:#e6eef8}
+.card{background:var(--card);border-radius:12px;padding:12px}
+.navbar-brand{font-weight:700}
+#market-cards .card{display:flex;align-items:center;justify-content:space-between}
+#market-cards .stat{flex:1;margin:6px;padding:10px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+h5{color:var(--accent)}
+#coins-table img{width:26px;height:26px}
+.positive{color:var(--success)}
+.negative{color:var(--danger)}
+#gainers-list li,#losers-list li{display:flex;justify-content:space-between;padding:.5rem .75rem}
+#convert-result{padding-top:.25rem}
+/* Modal tweaks */
+.modal-content{background:transparent;border:none}
+
+/* Light mode */
+body.light{--bg:#f6f8fb;--card:#ffffff;color:#0b1220}
+
+@media (max-width:767px){
+  #market-cards{grid-template-columns:repeat(2,1fr)}
+}

@@ -1,0 +1,65 @@
+:root{
+	--bg: #ffffff;
+	--text: #0b1220;
+	--muted: #4f5966;
+	--card-bg: #f8f9fa;
+	--link: #0d6efd;
+	--nav-bg: #212529;
+}
+
+@media (prefers-color-scheme: dark){
+	:root{
+		--bg: #07121a;
+		--text: #f1f7fb;
+		--muted: #aab6c2;
+		--card-bg: #0f2230;
+		--link: #66b2ff;
+		--nav-bg: #071018;
+	}
+}
+
+html,body{
+	height:100%;
+	background-color:var(--bg);
+	color:var(--text);
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+header{ background-image: linear-gradient(90deg, rgba(0,0,0,0.03), rgba(0,0,0,0.02)); color:var(--text); }
+
+.navbar, .bg-dark{ background-color:var(--nav-bg) !important; }
+.navbar .navbar-brand{ color:var(--text) !important; font-weight:600; }
+.navbar .nav-link { color:var(--muted) !important; }
+.navbar .nav-link:hover{ color:var(--text) !important; }
+
+#coins-table table{ width:100%; color:var(--text); }
+#coins-table a{ color:var(--link); }
+
+table.table thead th{ color:var(--text); }
+table.table tbody td{ color:var(--text); }
+
+/* increase contrast for table rows */
+table.table tbody tr{ background-color: rgba(255,255,255,0.02); }
+table.table tbody tr:nth-child(even){ background-color: rgba(255,255,255,0.025); }
+table.table thead{ background-color: rgba(0,0,0,0.25); }
+table.table thead th{ color:var(--text); }
+
+.card, .container, main, .canvas-container{ background-color:transparent; }
+
+a{ color:var(--link); }
+p, li, label, input, button { color:var(--text); }
+
+.text-muted{ color:var(--muted) !important; }
+
+/* ensure Chart.js canvas text contrasts (tooltips etc) */
+canvas{ color:var(--text); }
+
+/* small responsive tweak */
+.canvas-container{ max-width:800px; }
+
+/* search/input contrast */
+input, textarea, select { color:var(--text); background-color: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06); }
+input::placeholder{ color: var(--muted); }
+
+/* card panels */
+.card, .panel, .widget{ background-color: var(--card-bg); color:var(--text); }
